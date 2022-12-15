@@ -1,0 +1,39 @@
+body {
+  font-family: sans-serif;
+  font-size: 20px;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 80px 80px 80px 80px;
+  grid-template-rows: auto;
+}
+
+.container > div {
+  color: black;
+  border: 2px solid gray;
+}
+
+.container .button {
+  background-color: rgb(250, 245, 245);
+  text-align: center;
+}
+.container .result {
+  background-color: rgb(75, 75, 75);
+  color: white;
+  grid-column: 1 / 5;
+  text-align: end;
+}
+.container .symbols {
+  background-color: rgb(208, 222, 228);
+  text-align: center;
+}
+.container .equal {
+  background-color: rgba(182, 57, 57, 0.774);
+  grid-column: 4/5;
+  grid-row: 3/7;
+  text-align: center;
+}
+.container .equal p {
+  padding-top: 100px;
+}
