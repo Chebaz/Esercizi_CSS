@@ -70,12 +70,62 @@ html {
   margin-top: 10px;
   margin-left: 90px;
 }
+.card-container .card2 .card-header .icon {
+  margin-top: 10px;
+  margin-left: 10px;
+}
+.card-container .card2 .card-header h5 {
+  top: 0;
+  margin-top: 10px;
+  margin-left: 8px;
+}
+.card-container .card2 .card-header h6 {
+  margin-bottom: 10px;
+  margin-left: -35px;
+  color: white;
+}
+.card-container .card2 .card-header .option {
+  margin-top: 10px;
+  padding-left: 80px;
+}
+.card-container .card3 .card-header .icon {
+  margin-top: 10px;
+  margin-left: 10px;
+}
+.card-container .card3 .card-header h5 {
+  top: 0;
+  margin-top: 10px;
+  margin-left: 5px;
+  font-size: 12px;
+}
+.card-container .card3 .card-header h6 {
+  margin-bottom: 10px;
+  margin-left: -104px;
+  color: white;
+}
+.card-container .card3 .card-header .option {
+  margin-top: 10px;
+  margin-left: 90px;
+}
 span {
   font-weight: bold;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 375px) and (max-width: 768px) {
   .card-container {
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+    overflow: scroll;
+  }
+}
+@media screen and (max-width: 375px) {
+  .card-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    overflow: scroll;
+    align-items: center;
   }
 }
