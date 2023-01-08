@@ -1,0 +1,82 @@
+@use "variable.scss";
+@use "function.scss";
+
+@mixin article-prova($font-size: 24) {
+  border-color: variable.$color_terzary;
+  border-right: 1px solid variable.$color_terzary;
+  font-size: function.pxToRem($font-size);
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid variable.$color_primary;
+  row-gap: 15px;
+  h1 {
+    color: variable.$color_terzary;
+    align-self: center;
+    text-decoration: 1px underline;
+    text-decoration-color: variable.$color_secondary;
+  }
+  & h2 {
+    @extend h1;
+    text-decoration: none;
+    border: 1px solid variable.$color_primary;
+    padding: 1rem;
+  }
+  .header {
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    row-gap: 15px;
+    border: 1px solid variable.$color_terzary;
+    width: 90%;
+
+    .not-last {
+      @include article-prova(16);
+    }
+    .red {
+      color: variable.$color_primary;
+      text-align: center;
+    }
+    .blue {
+      color: variable.$color_secondary;
+      text-align: center;
+    }
+  }
+  .number {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    @each $number in variable.$square_number {
+      .fs-#{$number}rem {
+        border: 1px solid red;
+        width: function.pxToRem(45);
+        height: function.pxToRem(45);
+      }
+    }
+    @for $i from 1 to 20 {
+      #fsid-#{$i}rem {
+        background-color: darken(variable.$base_color, $i * 5%);
+        color: lighten(variable.$black_color, $i * 5%);
+        font-size: random($limit: function.pxToRem(32)) + 0.5rem;
+        @if ($i == 10) {
+          background-color: variable.$color_secondary;
+          color: variable.$color_primary;
+        }
+      }
+    }
+  }
+  .footer {
+    align-self: center;
+    border: 1px solid variable.$color_secondary;
+    width: 90%;
+    article {
+      @include article-prova();
+      border-right: none;
+      p {
+        text-align: center;
+        color: variable.$color_terzary;
+      }
+    }
+  }
+}
