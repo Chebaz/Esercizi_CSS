@@ -1,0 +1,38 @@
+$color_primary: red;
+$color_secondary: blue;
+$color_terzary: green;
+
+.container {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid $color_primary;
+  row-gap: 10px;
+  h1 {
+    align-self: center;
+    color: $color_terzary;
+    border-bottom: 1px solid $color_secondary;
+    text-decoration-color: $color_secondary;
+  }
+  section {
+    display: flex;
+    align-self: center;
+    flex-direction: row;
+    justify-content: center;
+    border: 1px solid $color_terzary;
+    width: 98%;
+
+    .not-last {
+      display: flex;
+      border-right: 1px solid $color_terzary;
+      height: auto;
+    }
+    .red {
+      color: $color_primary;
+      text-align: center;
+    }
+    .blue {
+      color: $color_secondary;
+      text-align: center;
+    }
+  }
+}
