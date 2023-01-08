@@ -1,0 +1,50 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid red;
+  row-gap: 15px;
+}
+.container h1 {
+  color: green;
+  align-self: center;
+  text-decoration: underline;
+  text-decoration-color: blue;
+}
+.container .header {
+  display: flex;
+  flex-direction: row;
+  align-self: center;
+  row-gap: 15px;
+  border: 1px solid green;
+  width: 90%;
+}
+.container .header .not-last {
+  border-color: green;
+  border-right: 1px solid green;
+  font-size: 1rem;
+}
+.container .header .red {
+  color: red;
+  text-align: center;
+}
+.container .header .blue {
+  color: blue;
+  text-align: center;
+}
+.container .footer {
+  align-self: center;
+  border: 1px solid blue;
+  width: 90%;
+}
+.container .footer article {
+  border-color: green;
+  border-right: 1px solid green;
+  font-size: 1.5rem;
+  border-right: none;
+}
+.container .footer article p {
+  text-align: center;
+  color: green;
+}
+
+/*# sourceMappingURL=style.css.map */
