@@ -1,0 +1,10 @@
+{
+  "version": 3,
+  "sourceRoot": "",
+  "sources": [
+    "style.scss"
+  ],
+  "names": [],
+  "mappings": "AASA;EACE;EACA;EACA;EACA;;AACA;EACE,OAbY;EAcZ;EACA;EACA,uBAjBc;;AAmBhB;EACE;EACA;EACA;EACA;EACA;EACA;;AAEA;EAvBF,cAHc;EAId;EACA,WAsB2B;;AAEzB;EACE,OAhCU;EAiCV;;AAEF;EACE,OAnCY;EAoCZ;;AAGJ;EACE;EACA;EACA;;AACA;EAvCF,cAHc;EAId;EACA,WAH+B;EA0C3B;;AACA;EACE;EACA,OA/CQ",
+  "file": "style.css"
+}

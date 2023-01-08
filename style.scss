@@ -1,0 +1,54 @@
+$color_primary: red;
+$color_secondary: blue;
+$color_terzary: green;
+
+@mixin article-prova($font-size: 24px) {
+  border-color: $color_terzary;
+  border-right: 1px solid $color_terzary;
+  font-size: $font-size;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid $color_primary;
+  row-gap: 15px;
+  h1 {
+    color: $color_terzary;
+    align-self: center;
+    text-decoration: underline;
+    text-decoration-color: $color_secondary;
+  }
+  .header {
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    row-gap: 15px;
+    border: 1px solid $color_terzary;
+    width: 90%;
+
+    .not-last {
+      @include article-prova(16px);
+    }
+    .red {
+      color: $color_primary;
+      text-align: center;
+    }
+    .blue {
+      color: $color_secondary;
+      text-align: center;
+    }
+  }
+  .footer {
+    align-self: center;
+    border: 1px solid $color_secondary;
+    width: 90%;
+    article {
+      @include article-prova();
+      border-right: none;
+      p {
+        text-align: center;
+        color: $color_terzary;
+      }
+    }
+  }
+}
